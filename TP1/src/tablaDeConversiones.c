@@ -37,17 +37,31 @@ void imprimirTablaAFahrenheit(int lower, int upper, int step){
     printf("\n");
 }
 
-/**int main(void) {
+int main(void) {
     
-    int lower,upper,step;
 
+    int lower,upper,step;
+    int input;
     lower = 0; 
     upper = 300;
     step = 20;
-    
-    imprimirTablas(lower, upper, step);
+    printf("Ingrese una opcion:\n 1)Fahrenheit \n 2)Celsius \n 3)Ambas tablas\n");
+    scanf("%d", &input);
+    switch (input)
+    {
+    case 1:
+        imprimirTablaAFahrenheit(lower,upper,step);
+        break;
+    case 2:
+        imprimirTablaACelsius(lower,upper,step);
+        break;
+    case 3:
+        imprimirTablas(lower,upper,step);
+        break;
+    default:
+        break;
+    }
     
     return 0;
 }
 
-**/
